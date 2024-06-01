@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "This is an activity for FSWD Lesson 7.1.2- JavaScript Modules: Smarter Code Splitting.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./bin"
+    "start": "node ./bin.mjs"
   },
   "author": "",
   "license": "ISC",

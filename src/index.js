@@ -1,4 +1,4 @@
-
+import { koalas } from "./koalas.js";
 let activeKoala = null
 
 // Changes the active koala, then re-renders the page to display that koala
@@ -9,9 +9,9 @@ let selectKoala = koala => {
 
 // Called once when the page loads, and again every time a koala is selected
 let render = () => {
-    let oldPage=  document.querySelector('.koala-container')
+    let oldPage = document.querySelector('.koala-container')
     let newPage;
-    if(activeKoala){
+    if (activeKoala) {
         newPage = renderActiveKoala(activeKoala)
     } else {
         newPage = renderKoalaList(koalas)
@@ -27,7 +27,7 @@ let renderKoalaList = koalas => {
 
     koalaContainer.setAttribute('class', 'ui items')
 
-    koalas.forEach( koala => {
+    koalas.forEach(koala => {
         let koalaCard = renderKoalaCard(koala)
         koalaContainer.append(koalaCard)
     })
